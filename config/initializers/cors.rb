@@ -7,8 +7,8 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'shipshape-api.herokuapp.com', 'https://shipshape-api.herokuapp.com', 'http://shipshape-api.herokuapp.com',
-            'api.shipshape.io', 'https://api.shipshape.io', 'http://api.shipshape.io',
+    origins 'shipshape-ui.herokuapp.com', 'https://shipshape-ui.herokuapp.com',
+            'shipshape.io', 'https://shipshape.io'
 
     resource '*',
              headers: :any,
