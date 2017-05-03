@@ -77,6 +77,7 @@ GEM
     nio4r (2.0.0)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
+    pg (0.20.0)
     puma (3.8.2)
     rack (2.0.1)
     rack-test (0.6.3)
@@ -146,6 +147,7 @@ DEPENDENCIES
   jsonapi-resources
   listen (>= 3.0.5, < 3.2)
   mailgun-ruby (~> 1.1.4)
+  pg
   puma (~> 3.7)
   rails (~> 5.1.0)
   spring
