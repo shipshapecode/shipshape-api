@@ -6,8 +6,8 @@ class ContactProcessor < JSONAPI::Processor
     mg_client = Mailgun::Client.new(ENV['mg_api'])
 
     body_text = ''
-    body_text << @result.resource.name + '<br>'
-    body_text << @result.resource.company + '<br>'
+    body_text << 'Name: ' + @result.resource.name + '<br>'
+    body_text << 'Company: ' + @result.resource.company + '<br><br>'
     body_text << @result.resource.description + '<br>'
 
 
