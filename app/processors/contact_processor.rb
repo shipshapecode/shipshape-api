@@ -5,12 +5,18 @@ class ContactProcessor < JSONAPI::Processor
     # First, instantiate the Mailgun Client with your API key
     mg_client = Mailgun::Client.new(ENV['mg_api'])
 
+    body_text = ''
+    body_text << @result.resource.name + '<br>'
+    body_text << @result.resource.company + '<br>'
+    body_text << @result.resource.description + '<br>'
+
+
     # Define your message parameters
     message_params = {
         from: @result.resource.email,
         to: 'ahoy@shipshape.io',
-        subject: 'New Contact Request',
-        text: @result.resource.description
+        subject: 'Contact - ' + @result.resource.project_type,
+        text: body_text
     }
 
     # Send your message through the client
