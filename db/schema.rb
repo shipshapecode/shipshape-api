@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170709191630) do
+ActiveRecord::Schema.define(version: 20170709192023) do
 
   create_table "contacts", force: :cascade do |t|
     t.string "company"
@@ -18,6 +18,13 @@ ActiveRecord::Schema.define(version: 20170709191630) do
     t.string "email"
     t.string "name"
     t.string "project_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "github_repos", force: :cascade do |t|
+    t.string "name"
+    t.integer "stars"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
