@@ -3,7 +3,9 @@ class GithubWebhooksController < ActionController::Base
   include GithubWebhook::Processor
   def github_watch(payload)
     name, stargazers_count = payload['repository'].to_json
-    GithubRepo.find_or_create_by(name: name, stars: stargazers_count)
+    puts name
+    puts stargazers_count
+    GithubRepo.where(name: name).first_or_create(name: name, stars: stargazers_count)
   end
 
   def webhook_secret(payload)
