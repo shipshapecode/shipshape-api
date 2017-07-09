@@ -1,7 +1,8 @@
 class GithubWebhooksController < ActionController::Base
+  require 'json'
   include GithubWebhook::Processor
   def github_watch(payload)
-    name, stargazers_count = payload['repository']
+    name, stargazers_count = payload['repository'].to_json
     GithubRepo.find_or_create_by(name: name, stars: stargazers_count)
   end
 
