@@ -1,3 +1,3 @@
 class GithubRepoResource < JSONAPI::Resource
-  attributes :name, :repo, :stars
+  attributes :name, :stars
 end
