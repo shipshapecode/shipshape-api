@@ -1,1 +1,1 @@
-Figaro.require_keys("mg_api")
+Figaro.require_keys("GITHUB_WEBHOOK_SECRET", "mg_api")
