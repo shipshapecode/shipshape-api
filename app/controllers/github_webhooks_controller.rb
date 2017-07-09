@@ -1,4 +1,4 @@
-class GithubWebhooksController < ApplicationController
+class GithubWebhooksController < ActionController::Base
   include GithubWebhook::Processor
   def github_watch(payload)
     name, stargazers_count = payload.repository
