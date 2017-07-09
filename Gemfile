@@ -24,7 +24,7 @@ gem 'puma', '~> 3.7'
 # gem 'rack-cors'
 
 gem "figaro"
-gem "github_api"
+gem 'github_webhook', '~> 1.0.4'
 gem 'jsonapi-resources'
 gem 'mailgun-ruby', '~>1.1.4'
 gem 'rack-cors'

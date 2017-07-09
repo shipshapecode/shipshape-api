@@ -1,0 +1,2 @@
+class GithubReposController < ApplicationController
+end
