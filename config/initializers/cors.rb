@@ -9,7 +9,8 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     origins 'shipshape-ui.herokuapp.com', 'https://shipshape-ui.herokuapp.com',
             'shipshape-ui.netlify.com', 'https://shipshape-ui.netlify.com',
-            'shipshape.io', 'https://shipshape.io'
+            'shipshape.io', 'https://shipshape.io',
+            'localhost', 'http://localhost:4200'
 
     resource '*',
              headers: :any,
